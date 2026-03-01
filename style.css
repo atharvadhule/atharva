@@ -515,23 +515,96 @@ section {
     transition-delay: 0.4s;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1024px) {
+    :root {
+        --spacing-xl: 80px;
+        --spacing-lg: 60px;
+        --spacing-md: 30px;
+    }
+
     .section-title {
+        font-size: 3rem;
+    }
+
+    .proj-header h3 {
         font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --spacing-xl: 60px;
+        --spacing-lg: 40px;
+        --spacing-md: 20px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .section-title {
+        font-size: 2.2rem;
     }
 
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-md);
     }
 
-    .project-card {
+    .about-content p {
+        font-size: 1.2rem;
+    }
+
+    .skill-category {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .cat-label {
+        margin-top: 0;
+    }
+
+    .project-item {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .proj-details {
+        padding-left: var(--spacing-md);
+    }
+
+    .proj-header {
         flex-direction: column;
-        gap: var(--spacing-sm);
+        gap: 10px;
     }
 
-    .proj-content h3 {
+    .proj-header h3 {
         font-size: 2rem;
+    }
+
+    .tech-tags {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    #hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .skill-block {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .contact-grid {
+        gap: var(--spacing-lg);
     }
 }
